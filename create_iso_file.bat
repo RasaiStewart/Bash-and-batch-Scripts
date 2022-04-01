@@ -1,0 +1,1 @@
+@For /F Tokens^=6^ Delims^=^" %%G In ('%SystemRoot%\System32\wbem\WMIC.exe Path Win32_CDROMDrive Where "MediaLoaded='True' And DriveIntegrity='True'" Get Drive /Format:MOF 2^>NUL') Do @"C:\Program Files\CDBurnerXP\cdbxpcmd.exe" --burn-data -folder:%%G\ -iso:"C:\donalds.iso" -format:iso
